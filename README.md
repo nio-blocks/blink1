@@ -1,24 +1,28 @@
-# Block Template
+Blink1
+======
 
-This repository serves as a "starter" repository for creating a new block.
+Control a blink(1) dongle. http://blink1.thingm.com/
 
-## How to use
+Note: The blink1 python module has a dependency on pyusb. On some machines it may be that pyusb from pypi is not a recent enough version. If you the block connects the to the Blink1 device but is unable to fade the colors, try installing from source: https://github.com/walac/pyusb. In addition to this, you can also try a newer version of blink1: https://github.com/todbot/blink1. This todbot repo is the official repo fro thingm, yet it is not the one on pypi.
 
-### Get the block template
-
- 1. Fork this repository into your own block
- 1. Clone this repository and rename the folder
-
-
-### Rename the appropriate files
-
- 1. Rename `example_block.py` to whatever your block name will be. We like to keep `_block` at the end of filenames that contain blocks.
- 1. In your new block Python file, rename the class to the new block's name. Do **not** put `Block` in the class name - this is implied.
- 1. Rename `test_example_block.py` to match your new block's class name. Always submit accompanying unit tests in the `tests` folder.
- 1. Rename `BLOCK_README.md` to `README.md` and update the documentation accordingly.
+Properties
+----------
+-   **fade_milliseconds**: Time it takes to fade to new color.
+-   **color (red, green, blue)** RGB color to fade to.
 
 
-## File Reference
+Dependencies
+------------
+-   **blink1**
 
- * **example_block.py** : This is the block code. Additional Python classes and files are definitely welcome. If the file contains a Block class, make sure the filename ends with `_block.py`. If the file represents a Base Block that is not discoverable by itself, have the filename end with `_base.py`.
- * **requirements.txt** : List out any Python dependencies this block requires. This file will be installed by pip when the block is installed. The command for installing the dependencies is `pip install -r requirements.txt`.
+Commands
+--------
+None
+
+Input
+-----
+Any list of signals.
+
+Output
+------
+None
