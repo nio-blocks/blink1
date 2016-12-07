@@ -1,8 +1,8 @@
 from collections import defaultdict
 from unittest.mock import MagicMock, patch
 from blink1.blink1 import Blink1 as B1
-from nio.util.support.block_test_case import NIOBlockTestCase
-from nio.common.signal.base import Signal
+from nio.testing.block_test_case import NIOBlockTestCase
+from nio.signal.base import Signal
 from ..blink1_block import Blink1
 
 

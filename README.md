@@ -1,9 +1,9 @@
 Blink1
 ======
 
-Control a blink(1) dongle. http://blink1.thingm.com/
+Control a [blink(1) dongle](http://blink1.thingm.com/).
 
-Note: The blink1 python module has a dependency on pyusb. On some machines it may be that pyusb from pypi is not a recent enough version. If you the block connects the to the Blink1 device but is unable to fade the colors, try installing from source: https://github.com/walac/pyusb. In addition to this, you can also try a newer version of blink1: https://github.com/todbot/blink1. This todbot repo is the official repo fro thingm, yet it is not the one on pypi.
+Note: The blink1 python module has a dependency on pyusb. On some machines it may be that pyusb from pypi is not a recent enough version. If your block connects to the Blink1 device but is unable to fade the colors, try installing from [source](https://github.com/walac/pyusb). In addition to this, you can also try a [newer version](https://github.com/todbot/blink1) of blink1. This todbot repo is the official repo for thingm, yet it is not the one on pypi.
 
 Properties
 ----------
@@ -13,7 +13,7 @@ Properties
 
 Dependencies
 ------------
--   **blink1**
+-   [**blink1**](https://pypi.python.org/pypi/blink1/0.0.12)
 
 Commands
 --------
