@@ -8,7 +8,7 @@ Note: The blink1 python module has a dependency on pyusb. On some machines it ma
 Properties
 ----------
 -   **fade_milliseconds**: Time it takes to fade to new color.
--   **color (red, green, blue)** RGB color to fade to.
+-   **color (colors= red|green|blue)**: RGB color to fade to.
 
 
 Dependencies
