@@ -1,23 +1,10 @@
 {
-    "nio/Blink1": {
-        "Output": {
-            "Description": "None"
-        },
-        "Version": "1.0.0",
-        "Description": "Control a [blink(1) dongle](http://blink1.thingm.com/).\nNote: The blink1 python module has a dependency on pyusb. On some machines it may be that pyusb from pypi is not a recent enough version. If your block connects to the Blink1 device but is unable to fade the colors, try installing from [source](https://github.com/walac/pyusb). In addition to this, you can also try a [newer version](https://github.com/todbot/blink1) of blink1. This todbot repo is the official repo for thingm, yet it is not the one on pypi.",
-        "Commands": {},
-        "Input": {
-            "Description": "Any list of signals."
-        },
-        "Properties": {
-            "color": {
-                "colors": "red|green|blue",
-                "description": "RGB color to fade to."
-            },
-            "fade_milliseconds": {
-                "description": "Time it takes to fade to new color."
-            }
-        },
-        "Category": "Hardware"
-    }
+  "nio/Blink1": {
+    "version": "0.0.1",
+    "description": "",
+    "inputs": {},
+    "outputs": {},
+    "properties": {},
+    "commands": {}
+  }
 }
