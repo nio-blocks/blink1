@@ -2,7 +2,7 @@ from blink1.blink1 import Blink1 as B1
 from nio.properties import Property
 from nio.properties.object import ObjectProperty
 from nio.properties.holder import PropertyHolder
-from nio.block.base import Block
+from nio import TerminatorBlock
 from nio.util.discovery import discoverable
 
 
@@ -13,7 +13,7 @@ class Color(PropertyHolder):
 
 
 @discoverable
-class Blink1(Block):
+class Blink1(TerminatorBlock):
 
     """ This is the Example block. Put a brief description here. """
 
