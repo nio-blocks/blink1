@@ -1,7 +1,7 @@
 {
   "nio/Blink1": {
     "language": "Python",
-    "version": "0.0.1",
-    "url": "git://github.com/nio-blocks/blink1.git"
+    "url": "git://github.com/nio-blocks/blink1.git",
+    "version": "1.0.0"
   }
 }

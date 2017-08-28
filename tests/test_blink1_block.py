@@ -1,20 +1,12 @@
-from collections import defaultdict
-from unittest.mock import MagicMock, patch
-from blink1.blink1 import Blink1 as B1
+from unittest.mock import patch
+
 from nio.testing.block_test_case import NIOBlockTestCase
 from nio.signal.base import Signal
+
 from ..blink1_block import Blink1
 
 
 class TestBlink1(NIOBlockTestCase):
-
-    def setUp(self):
-        super().setUp()
-        # This will keep a list of signals notified for each output
-        self.last_notified = defaultdict(list)
-
-    def signals_notified(self, signals, output_id='default'):
-        self.last_notified[output_id].extend(signals)
 
     @patch(Blink1.__module__ + '.B1')
     def test_defaults(self, b1):
