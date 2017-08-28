@@ -1,9 +1,8 @@
 from blink1.blink1 import Blink1 as B1
-from nio.properties import Property
-from nio.properties.object import ObjectProperty
-from nio.properties.holder import PropertyHolder
+
+from nio.properties import (Property, ObjectProperty, PropertyHolder,
+                            VersionProperty)
 from nio import TerminatorBlock
-from nio.util.discovery import discoverable
 
 
 class Color(PropertyHolder):
@@ -12,14 +11,14 @@ class Color(PropertyHolder):
     blue = Property(title='Blue', default='0')
 
 
-@discoverable
 class Blink1(TerminatorBlock):
 
-    """ This is the Example block. Put a brief description here. """
+    """ Control a blink(1) dongle. """
 
     fade_milliseconds = Property(title='Time to fade (ms)',
                                  default='1000')
     color = ObjectProperty(Color, title='Color', default=Color())
+    version = VersionProperty('1.0.0')
 
     def __init__(self):
         super().__init__()
