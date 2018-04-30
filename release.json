@@ -2,6 +2,11 @@
   "nio/Blink1": {
     "language": "Python",
     "url": "git://github.com/nio-blocks/blink1.git",
-    "version": "1.0.0"
+    "version": "2.0.0"
+  },
+  "nio/Blink1RGB": {
+    "language": "Python",
+    "url": "git://github.com/nio-blocks/blink1.git",
+    "version": "2.0.0"
   }
 }

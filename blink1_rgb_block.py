@@ -18,7 +18,7 @@ class Blink1RGB(TerminatorBlock):
     fade_milliseconds = Property(title='Time to fade (ms)',
                                  default='1000')
     color = ObjectProperty(Color, title='Color', default=Color())
-    version = VersionProperty("1.0.0")
+    version = VersionProperty("2.0.0")
 
     def __init__(self):
         super().__init__()
