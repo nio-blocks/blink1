@@ -35,7 +35,7 @@ class Blink1(TerminatorBlock):
         for signal in signals:
             try:
                 fade_milliseconds = int(self.fade_milliseconds(signal))
-                color = string(self.color(signal))
+                color = str(self.color(signal))
             except:
                 self.logger.exception('Failed to evalue fade variables')
                 continue
