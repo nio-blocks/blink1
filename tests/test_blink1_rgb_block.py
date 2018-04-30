@@ -8,7 +8,7 @@ from ..blink1_rgb_block import Blink1RGB
 
 class TestBlink1(NIOBlockTestCase):
 
-    @patch(Blink1.__module__ + '.B1')
+    @patch(Blink1RGB.__module__ + '.B1')
     def test_defaults(self, b1):
         blk = Blink1RGB()
         self.configure_block(blk, {})
@@ -20,7 +20,7 @@ class TestBlink1(NIOBlockTestCase):
         blk._blink1.close.assert_called_once_with()
         self.assert_num_signals_notified(0)
 
-    @patch(Blink1.__module__ + '.B1')
+    @patch(Blink1RGB.__module__ + '.B1')
     def test_expresssion_props(self, b1):
         blk = Blink1RGB()
         self.configure_block(blk,
@@ -40,7 +40,7 @@ class TestBlink1(NIOBlockTestCase):
         blk._blink1.close.assert_called_once_with()
         self.assert_num_signals_notified(0)
 
-    @patch(Blink1.__module__ + '.B1')
+    @patch(Blink1RGB.__module__ + '.B1')
     def test_multiple_sigs(self, b1):
         blk = Blink1RGB()
         self.configure_block(blk, {})
