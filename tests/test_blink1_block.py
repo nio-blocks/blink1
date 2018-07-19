@@ -17,6 +17,9 @@ class TestBlink1(NIOBlockTestCase):
         blk.process_signals([Signal()])
         blk._blink1.fade_to_rgb.assert_called_once_with(1000, 0, 0, 0)
         blk.stop()
+        # blink1 is turned off when stopped
+        self.assertEqual(blk._blink1.fade_to_rgb.call_count, 2)
+        self.assertEqual(blk._blink1.fade_to_rgb.call_args[0], (0, 0, 0, 0))
         blk._blink1.close.assert_called_once_with()
         self.assert_num_signals_notified(0)
 

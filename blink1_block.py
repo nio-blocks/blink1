@@ -32,6 +32,8 @@ class Blink1(TerminatorBlock):
 
     def stop(self):
         try:
+            self.logger.debug('Turning off Blink1 and closing connection')
+            self._blink1.fade_to_rgb(0, 0, 0, 0)
             self._blink1.close()
         except:
             self.logger.exception('Exception while closing Blink1 connection')
