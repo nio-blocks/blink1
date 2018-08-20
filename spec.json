@@ -1,6 +1,6 @@
 {
   "nio/Blink1": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Control a [blink(1) dongle](http://blink1.thingm.com/).\n\nInstallation Notes:\n--------------------\n- **Linux**: In modern Linux kernels, you can enable `CONFIG_HID_THINGM` or `CONFIG_HID_LEDS` to enable blink1 support in the kernel. Some kernels, such as Raspbian for the Raspberry Pi has this enabled by default so no additional installation steps are necessary.\n- **Mac and Windows**: Upgrade to the newest blink1 version: `pip3 install -U blink1`.",
     "categories": [
       "Hardware"
