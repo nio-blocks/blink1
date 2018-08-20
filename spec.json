@@ -1,7 +1,7 @@
 {
   "nio/Blink1": {
     "version": "1.0.0",
-    "description": "Control a [blink(1) dongle](http://blink1.thingm.com/). Note: The blink1 python module has a dependency on pyusb. On some machines it may be that pyusb from pypi is not a recent enough version. If your block connects to the Blink1 device but is unable to fade the colors, try installing from [source](https://github.com/walac/pyusb). In addition to this, you can also try a [newer version](https://github.com/todbot/blink1) of blink1. This todbot repo is the official repo for thingm, yet it is not the one on pypi.",
+    "description": "Control a [blink(1) dongle](http://blink1.thingm.com/).\n\nInstallation Notes:\n--------------------\n- **Linux**: In modern Linux kernels, you can enable `CONFIG_HID_THINGM` or `CONFIG_HID_LEDS` to enable blink1 support in the kernel. Some kernels, such as Raspbian for the Raspberry Pi has this enabled by default so no additional installation steps are necessary.\n- **Mac and Windows**: Upgrade to the newest blink1 version: `pip3 install -U blink1`.",
     "categories": [
       "Hardware"
     ],
@@ -9,7 +9,7 @@
       "color": {
         "title": "Color",
         "type": "ObjectType",
-        "description": "(colors= red|green|blue): RGB color to fade to.",
+        "description": "(colors= red|green|blue): RGB color to fade to, each component color brightness is an 8-bit value, so the values `0-255` are valid.",
         "default": {
           "blue": "0",
           "green": "0",
@@ -19,13 +19,13 @@
       "fade_milliseconds": {
         "title": "Time to fade (ms)",
         "type": "Type",
-        "description": "Time it takes to fade to new color.",
+        "description": "Time to fade to `color`.",
         "default": "1000"
       }
     },
     "inputs": {
       "default": {
-        "description": "Any list of signals."
+        "description": "Any list of signals, `color` and `fade_milliseconds` are evaluated for each signal."
       }
     },
     "outputs": {},
